@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inheritance In CSS</title>
+	<!--<style >
+		body{
+			color: red;
+			font-family: Helvetica;
+			text-align: center;
+		}
+		p{
+			color: blue;
+		}
+		
+	</style>-->
+	<style>
+		header.navigation p{
+			color: blue;
+		}
+		p.blurb{
+			color: red;
+		}
+		p{
+			color: green !important;
+		}
+	</style>
+</head>
+<body>
+	<header class="navigation">
+		<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ad exception evenint odio, fuga nam quidem represntation.</p>
+	</header>
+<h1>Cascade of CSS Example</h1>
+<h2>Subheading 1</h2>
+<p>Inheritance allows us to write more global styles on parents elements and then "fine-tune" the styles for some of the child elements as needed. Such approach makes writinf CSS very difficult. </p>
+<h2 style="color: skyblue;">Subheading 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ad exception evenint odio, fuga nam quidem represntation.</p>
+</body>
+</html>

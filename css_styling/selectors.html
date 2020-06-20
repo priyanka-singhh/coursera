@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+	<!-- there are three types of basic selctors element,id(#),class(.)-->
+
+	<!-- element selector- the element selector is just you specifying the element name
+		CLASS selector-the class selector is specified with a dot and the name of the class.
+		ID SELECTOR - it specified with the # symbol-->
+	<style>
+		h1,h2{
+			font-family: verdana;
+			color: red;
+			text-align: center;
+		}
+		.classstyle{
+			font-family: arial;
+			color: blue;
+		}
+		#idstyle{
+			font-family: courier;
+			color: pink;
+		}
+		.highlight{
+			background-color: green;
+		}
+		.midpoint.highlight{
+			color: red;
+			background-color: black;
+		}
+		p.highlight {
+			font-style: italic;
+		}
+		/*P element that is a direct child of an article element. So in this example, you can see that the P element that is a direct child of an article element will get the styling of color blue applied to it, as opposed to a regular P element that will obviously be unaffected*/
+		section>article{
+			color:green;
+			font-size: 24px;
+		}
+		section>h3{
+			color: brown;
+		}
+		/*Another type of selector id is a descendant selector. And the syntax of it is, selector space another selector. And just like before you read it from right to left. So in this case what we're trying to do is target every P element that is inside at any level. Of an article element, which means that even if it's not a direct child, even if it's deep down, as long as one of its parents in its ancestry is an article, this rule will apply.*/
+		section li{
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+	
+<h1>Selectors Practice </h1>
+<h2>First is: Element Selector</h2>
+<p class="classstyle">A lot of people "tinker" with CSS. In this module, we'll take you from the very basics of CSS3 to some fairly advanced concepts like floating and CSS rule conflict resolution.</p>
+<p id="idstyle">We'll go over the 'box model', background property, etc. We'll finish off the module with learning about Responsive Design using our own CSS code as well as start introducing Twitter Bootstrap with its essential Grid System.</p>
+<h1 class="highlight">Combining Selector</h1>
+<p>We'll finish off the module with learning </p>
+<p class="highlight"> This is class highlight paragraph</p>
+<div class="midpoint highlight">
+	this is direct child of class
+</div>
+<br>
+<h1 style="text-align: left"> Direct child selector</h1>
+<section>
+	<h3>Subheading 1(direct child of subheading)</h3>
+	<div>
+		<article>ARTICLE which inside DIV, which is inside section</article>
+	</div>
+</section>
+<section>
+	<article>Ariticle as the direct child of section element.</article>
+</section>
+<h3>Subheading 2</h3>
+<h1 style="text-align: left"> Decendent selector</h1>
+<section>
+	Table of content:
+	<ul>
+		<li>Article 1</li>
+		<li>Article 2</li>
+		<li>Article 3</li>
+	</ul>
+</section>
+<article>
+	Shopping List:
+	<ul>
+	<li>Cookies</li>
+	<li>Cake</li>
+	<li>Pie</li>
+	</ul>
+</article>
+</body>
+</html>
+<!--Combining Selectors is a very powerful technique that allows you to more precisely target dumb elements-->

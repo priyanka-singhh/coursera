@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--this lecture we're going to talk about positioning elements by floating them.-->
+	<title>Floating Elements</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			background-color: #00FFFF;
+			margin-top:0px;
+		}
+		p{
+			width: 50px;
+			height: 50px;
+			border: 2px solid brown;
+			margin-bottom:15px;
+		}
+		#p1{
+			background-color: #A52A2A;
+			float: left;
+			height: 150px;
+		}
+		#p2{
+			background-color: #DEB887;
+			float: right;
+			height: 100px;
+		}
+		#p3{
+			background-color: #5F9EA0;
+			clear: both;/* IN CLEAR RIGHT THE WHOLE 300 WIDTH IS TAKEN BY PARA. AND THIRD PARA WILL BE IN NEW LINE AFTER 2ND.
+			BUT IN CLEAR LEFT THERE IS NO CHANGE IN ALIGNMENT OF 3RD PARA ONLY THE SIZE OF BOX 2 INCREASES.*/
+
+
+		}
+		#p4{
+			background-color: #FF7F50;
+		}
+		section{
+			clear: left;
+		}
+		/*when it comes to section element to tell the browser to resume regular flow property we use clear*/
+		#container{
+			background-color: #00FFFF;
+			position: relative;
+		}
+		#p5{
+			background-color: #A52A2A;
+			position: relative;
+			top: 65px;
+			left: 65px;
+		}
+		#p6{
+			background-color: #DEB887;
+		}
+		#p7{
+			background-color: #5F9EA0;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		#p8{
+			background-color: lightpink;
+		}
+	</style>
+</head>
+<body>
+	<h1>Floating Element</h1>
+	<!-- IN FLOATING ELEMENTS THE MARGIN NEVER COLLAPSE-->
+	<!--div seemed to have completely collapsed and the only thing that's really keeping it open at all is the text that we've put in here. This is happening because of the same point that I made before. When you float elements it takes them out of the regular document flow, therefore it collapses and hide, and surrounds the last section element which has actually some text in it-->
+		<div>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<p id="p3"></p>
+		<p id="p4"></p>
+		<section>
+			This is regular content continuing after the paragraph boxes.
+		</section>
+	</div>
+	<h1>Positioning Element</h1>
+	<div id="container">
+		<p id="p5"></p>
+		<p id="p6"></p>
+		<p id="p7"></p>
+		<p id="p8"></p>
+	</div>
+
+
+</body>
+</html>
+>
+<!-- The element is positioned relative to its position in the normal document flow. In other words, if you were to apply offsets on that element, there will be offset, from the original normal document flow position of that element.So the elements top, bottom, left, and right(offset) edges become the boundaries from which you offset the element. The important thing to know about relative position is that the element that is set to relative positioning is not taken out of normal document flow.-->
+
+<!--absolute positioning is that all offsets, top, bottom, left, right, are all relative to the position of the nearest ancestor which has positioning set on it other than static. In other words, some parent, grandparent, on and on and on, ancestor has to have its positioning set other than static, and then the absolute positioning will actually start working.-->

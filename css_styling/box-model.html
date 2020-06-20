@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The box Model</title>
+	<style >
+		/**{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		} This is used to include the margin,padding and border size inside the box size. It does not takes sapce for these outside the width and height of the border.*/
+		body{
+			background-color: lightpink;
+		}
+		#box{
+			background-color: skyblue;
+			padding: 10px 10px 10px 10px;
+			border: 10px solid purple;
+			margin: 10px 10px 10px 10px;
+			width:300px;
+			height: 50px;
+			box-sizing: border-box;
+			/*Overflow is used to manage content inside the box.(visible,hidden,auto-for scroll,scroll)*/
+			overflow: auto;
+		}
+		#content{
+			background-color: green;
+		}
+		h1{
+			margin-bottom: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>This is Box Model</h1>
+	<!-- <p>this is box model tutorial which helps us to learning in the properties of box model.</p> -->
+	<div id="box">
+		<div id="content">Hello this is box model tutorial which helps us to learning in the properties of box model.	
+		</div>
+	</div>
+	</div>
+		this is box model tutorial which helps us to learning in the properties of box model.
+		<div>
+</body>
+</html>

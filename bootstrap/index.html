@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aunt Daisy's</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+  </head>
+<body>
+  <header>
+    <!-- bootsrap navbar and their content fluid by default. Use optional containers to limit their horizontal width.-->
+    <nav id="header-nav" class="navbar navbar-defalut">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img" alt="Logo image" ></div>
+          </a>
+          <!-- Navbar require a wrapping .navbar with .navbar-expand for responsive collapsing na dcolor scheme classes-->
+          <!-- .navbar-brand for company,product,or project name-->
+          <div class="navbar-brand">
+            <a href="index.html"><h1>GREEN POINT</h1></a>
+            <p>
+              <img src="star-k-logo.png" alt="Kosher Certification" height="30px" width="30px">
+              <span>kosher Certified</span>
+            </p>
+          </div>
+        <!-- This button is for when we strech out device and turn to mobile device the icon used for laptop device is change to three line indicator and have a dropdown-->
+        <!-- the navbar-toggle is bootstrap class.
+        .navbar-toggler for use with our collapse plugin and other navigation toggling behaviors -->
+        <!-- responsive behaviour dpend on the(collapse javascript plugin) collapsed class-->
+        <!-- aria-expanded this is for sreen reader-->
+        <!--This three icon bar is for three horizontal line look like icon-->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+          <span class="sr-only"> Toggle Navigator</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!--This div contain all our menu items-->
+      <!-- The nav navbar-nav is tells us that I am going to be a component of our navigation 
+        navbar-right is used specially used for navigaton bar.but i want it to be oulled to right-->
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li>
+            <a href="menu-categories.html">
+              <!-- this glyphicon classes is used to bring icon font anf it is basically a vector based image that would behave same as the font would behave you can color it, size it and etc--> 
+              <span class="glyphicon glyphicon-cutlery"></span>
+              <br class="hidden-xs">Menu
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-info-sign"></span>
+              <br class="hidden-xs">About
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-certificate"></span>
+              <br class="hidden-xs">Awards
+            </a>
+          </li>
+          <li id="phone" class="hidden-xs">
+            <a href="tel:410-602-5008">
+              <span>410-602-5008</span>
+            </a><div>* We Deliver</div>
+          </li>
+        </ul><!--#nav-list-->
+      </div><!--.collapse .navbar-collapse-->
+
+    </div>
+    </nav>
+  </header>
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+     <span class="glyphicon glyphicon-earphone"></span>410-602-5008
+    </a>
+  </div>
+  <div id="xs-deliver" class="texr-center visible-xs">* We Deliver</div>
+  <!-- This container is for the entire page other than the header navbar it conatins the important information-->
+  <!-- The jubotron is used for the special content shown in our page it is a grey block in which we put that content which is important-->
+  <div id="main-content" class="container">
+    <div class="jumbotron">
+      <img src="jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
+    </div>
+
+    <!--The  three tiles below the jumbotron-->
+    <div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="menu-category.html"><div id="menu-tiles"><span>menu</span></div></a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="single-category.html"><div id="specials-tiles"><span>specials</span></div></a>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="" target="_blank">
+          <div id="map-tile">
+            <span>map</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

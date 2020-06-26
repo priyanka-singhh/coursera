@@ -13,7 +13,7 @@ body {
 	
 }
 #logo-img{
-	background: url('https://nice-assets.s3-accelerate.amazonaws.com/smart_templates/71874e767f3ae3779df50d3143931e57/assets/preview_637165ae3cd10649c3a86f0e394c7918.jpg') no-repeat;
+	background: url('../images/green-point-logo.jpg') no-repeat;
 	background-size: 120px;
 	width: 120px;
 	height: 120px;
@@ -99,8 +99,9 @@ body {
 	box-shadow: 0 0 50px #3F0c1F;
 	border: 2px solid #3F0C1F;
 	}
+
 /* use , for sharing the same code*/
-#menu-tiles, #specials-tiles, #map-tile{
+#menu-tile, #specials-tile, #map-tile{
 	height: 250px;
 	width: 100%;
 	margin-bottom: 15px;
@@ -108,13 +109,38 @@ body {
 	border: 2px solid #3F0C1F;
 	overflow: hidden;
 }
+
 #menu-tile:hover, #specials-tile:hover, #map-tile:hover{
 	box-shadow: 0 1px 5px #cccccc;
 }
+
+#menu-tile{
+	background: url('../images/menu-tiles.jpg') no-repeat;
+	background-position: center;
+}
+
+#specials-tile{
+	background: url('../images/specials-tiles.jpg') no-repeat;
+	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+/*HOME PAGE END**/
 /********** Large devices only *********/
 @media (min-width: 1200px){
 	.container .jumbotron{
-		background: url("../jumbotron_1200.jpg") no-repeat;
+		background: url("../images/jumbotron-1200.jpg") no-repeat;
 		height: 605px;
 		/*width: 965px*/
 	}
@@ -133,7 +159,7 @@ body {
 
 	/* Home Page*/
 	.container .jumbotron{
-		background: url('../jumbotron_992.jpg') no-repeat;
+		background: url('../images/jumbotron_992.jpg') no-repeat;
 		height: 500px;
 	}/*end of home page*/
 
@@ -142,7 +168,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px){
 	/*Home page*/
 	.container .jumbotron{
-		background: url('../jumbotron_768.jpg') no-repeat;
+		background: url('../images/jumbotron_768.jpg') no-repeat;
 		height: 380px;
 	}/* End home page*/
 }
@@ -192,4 +218,22 @@ body {
 	padding: 0;
 }
 
+#menu-tile, #specials-tile{
+	width: 350px;
+	margin: 0 auto 15px;
+}
+
+}
+
+/****** Super extra small devices only *****/
+@media (max-width: 476px)
+{
+	.navbar-brand h1{
+		padding-top: 5px;
+		font-size: 8vw;
+	}
+	#menu-tile, #specials-tile{
+		width: 280px;
+		margin: 0 auto 15px;
+	}
 }

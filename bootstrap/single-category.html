@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aunt Daisy's</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+  </head>
+<body>
+  <header>
+    <!-- bootsrap navbar and their content fluid by default. Use optional containers to limit their horizontal width.-->
+    <nav id="header-nav" class="navbar navbar-defalut">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img" alt="Logo image" ></div>
+          </a>
+          <!-- Navbar require a wrapping .navbar with .navbar-expand for responsive collapsing na dcolor scheme classes-->
+          <!-- .navbar-brand for company,product,or project name-->
+          <div class="navbar-brand">
+            <a href="index.html"><h1>GREEN POINT</h1></a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher Certification" height="30px" width="30px">
+              <span>kosher Certified</span>
+            </p>
+          </div>
+        <!-- This button is for when we strech out device and turn to mobile device the icon used for laptop device is change to three line indicator and have a dropdown-->
+        <!-- the navbar-toggle is bootstrap class.
+        .navbar-toggler for use with our collapse plugin and other navigation toggling behaviors -->
+        <!-- responsive behaviour dpend on the(collapse javascript plugin) collapsed class-->
+        <!-- aria-expanded this is for sreen reader-->
+        <!--This three icon bar is for three horizontal line look like icon-->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+          <span class="sr-only"> Toggle Navigator</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!--This div contain all our menu items-->
+      <!-- The nav navbar-nav is tells us that I am going to be a component of our navigation 
+        navbar-right is used specially used for navigaton bar.but i want it to be oulled to right-->
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li class="visible-xs">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span> Home
+            </a>
+          </li>
+          <li class="active">
+            <a href="menu-category.html">
+              <!-- this glyphicon classes is used to bring icon font anf it is basically a vector based image that would behave same as the font would behave you can color it, size it and etc--> 
+              <span class="glyphicon glyphicon-cutlery"></span>
+              <br class="hidden-xs">Menu
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-info-sign"></span>
+              <br class="hidden-xs">About
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-certificate"></span>
+              <br class="hidden-xs">Awards
+            </a>
+          </li>
+          <li id="phone" class="hidden-xs">
+            <a href="tel:410-602-5008">
+              <span>410-602-5008</span>
+            </a><div>* We Deliver</div>
+          </li>
+        </ul><!--#nav-list-->
+      </div><!--.collapse .navbar-collapse-->
+
+    </div>
+    </nav>
+  </header>
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+     <span class="glyphicon glyphicon-earphone"></span>410-602-5008
+    </a>
+  </div>
+  <div id="xs-deliver" class="texr-center visible-xs">* We Deliver</div>
+   
+   <!-- **** THIS IS INSIDE MENU CATEGORY PAGE ******-->
+
+   <div id="main-content" class="container"> <!--  this is the heading of the page-->
+     <!--Inside Menu tiles on the page-->
+      <h2 id="menu-category-title" class="text-center">Lunch Menu</h2>
+      <div class="text-center"> Lunch is not served untill after 1:00pm</div>
+      <section class="row">
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D01</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.
+            This is very tasty dish and nutritious as vegetable is used in it.This is very tasty dish and nutritious as vegetable is used in it.This is very tasty dish and nutritious as vegetable is used in it.This is very tasty dish and nutritious as vegetable is used in it.This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D02</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div><!-- to solving the problem of floating elements dispositiong-->
+
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D03</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D04</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div><!-- to solving the problem of floating elements dispositiong-->
+
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D05</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5"><!-- for photo-->
+            <div class="menu-item-photo">
+              <div>D06</div>
+              <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item">
+            </div>
+            <div class="menu-item-price">$10.95<span> (pint)</span> $14.05 <span>(quart)</span></div>
+          </div><!-- end of photo-->
+          <div class="menu-item-description col-sm-7"><!-- for content-->
+            <h3 class="menu-item-title">Vegetable Roll</h3>
+            <p class="menu-item-details">This is very tasty dish and nutritious as vegetable is used in it.</p>
+          </div><!--end of content-->
+        </div>
+        <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div><!-- to solving the problem of floating elements dispositiong-->
+
+       </section>
+   </div><!--  END OF MAIN-CONTENT-->
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Mon: 08:00am - 11:00pm<br>
+          Friday Closed
+          <hr class="visible-xs">
+        </section>
+
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          126, Rakesh Marg Ghaziabad,<br> 
+          Uttar Pradesh 201001
+          <p>* Home Delivery(No extra charges) Takeaway</p>
+          <hr class="visible-xs">
+        </section>
+
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Indian restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Good place to have a hangout with friends and family too!</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright Green Point Vegas 2010
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

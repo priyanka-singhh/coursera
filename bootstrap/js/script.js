@@ -303,7 +303,7 @@ console.log(myCircle);// it gives the value of radius
 console.log(myCircle.getArea());*/
 
 //FUNCTION PROTOTYPE 
-function Circle (radius) {
+/*function Circle (radius) {
 	this.radius = radius;
 }
 Circle.prototype.getArea = function(){
@@ -348,4 +348,69 @@ var literalCircle = {
 		return Math.PI * Math.pow(this.radius, 2);
 	}
 };
-console.log(literalCircle.getArea());
+console.log(literalCircle.getArea());*/
+
+
+//    ARRAYS , CLOSURES AND NAMESPACE  
+
+/*var array = new Array();
+array[0] = "Pri";
+array[1] = 2;
+array[2] = function(name) {
+	console.log("Hello " + name);
+}  ;
+array[3] = {course: " HTML, CSS & JS"};
+console.log(array);
+console.log(array[0]);
+array[2](); // it shows undefined becoz we have to pass argument to it
+array[2]("Pri");
+array[2](array[0]);
+console.log(array[3].course);*/
+
+//      SHORT HAND ARRAY CREATION    
+var names = ["Pri","singh" ,"rajput"];
+console.log(names);
+
+/*var names = [
+	{name: "Pri"},
+	{name: "John"},
+	{name: "Joe"}
+]
+console.log(names);*/
+
+for(var i =0; i<names.length; i++)
+{
+	console.log("Hello "+ names[i]);
+}
+
+names[100] = "Jim";
+for(var i =0; i<names.length; i++)
+{
+	console.log("Hello "+ names[i]);
+}
+
+var names2 = ["Pri","singh" ,"rajput"];
+var myObj = {
+	name: "Pri",
+	course: "HTML/CSS/JS",
+	platform: "Coursera"
+};
+for(var prop in myObj){
+	console.log(prop+ ": "+ myObj[prop]);
+}
+
+//   CLOSURES
+function makeMultiplier (multiplier) {
+	// var multiplier = 2
+	function b() {
+		console.log("Multiplier is: " + multiplier );
+	}
+	b();
+	return(
+			function (x) {
+				return multiplier * x;
+			}
+		);
+}
+var doubleAll = makeMultiplier(2);
+console.log(doubleAll(10));

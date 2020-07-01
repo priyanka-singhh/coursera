@@ -1,10 +1,10 @@
-/************* BASIC VARIABLE DECLARATION *********/
+/*/************* BASIC VARIABLE DECLARATION *********
 var x ="hello World!";
 var message ="in global";
 console.log("global:message = " + message)
 /**************************************************/
 
-/*********** FUNCTION IN JS *******************/
+/*********** FUNCTION IN JS *******************
 var a = function () {
 	var message =" inside a";
 	console.log("a: message = "+message)
@@ -31,7 +31,7 @@ b();// here the b print the local variable because here outer scope of b is a.
 a();
 /************************************************/
 
-/********* UNDEFINED AND DEFINED VARIABLES ***********/
+/********* UNDEFINED AND DEFINED VARIABLES ***********
 var x; //here it shows undefined(meaning that memory space id=s allocated and variable is declared but thr=e value is not given) becuase we didnt assign any value to x 
 console.log(x);
 if (x==undefined){
@@ -49,13 +49,13 @@ else{
 }
 /****************************************************/
 
-/************ STRING CONCATENATION ******************/
+/************ STRING CONCATENATION ******************
 var string = "Hello";
 string += " World";
 console.log(string+"!");
 /****************************************************/
 
-/**************** REGULAR MATH OPERATION : +,-,*,/***/
+/**************** REGULAR MATH OPERATION : +,-,*,/***
  console.log((5 + 4) / 3);
  console.log(undefined / 5);
  function test1(a){
@@ -64,7 +64,7 @@ console.log(string+"!");
  test1(); // it shows NaN(not a number) bcoz we can not pass any argument here if we pass it gives the output
 /****************************************************/
 
-/**********************EQUALITY **************/
+/**********************EQUALITY **************
 var x=4, y=4;
 if ( x == y )
 {
@@ -77,7 +77,7 @@ if(x==y)
 }// it shows true becoz of type conversion
 /*********************************************/
 
-/************** STRICT EQUALITY***************/
+/************** STRICT EQUALITY***************
 var x='4', y=4;
 if(x === y){
 	console.log("strict: x='4' is equal to y=4")
@@ -88,7 +88,7 @@ else{
 
 /*********************************************/
 
-/*********** If STATEMENT (all false) ***********/
+/*********** If STATEMENT (all false) ***********
 if ( false || null || undefined || "" || 0 || NaN)
 {
 	console.log("This line wont ever execute");
@@ -105,7 +105,7 @@ if ( true && "hello" && 1 && -1 && "false")
 } 
 /************************************************/
 
-/************ BEST PRACTICE FOR {} STYLE ********/
+/************ BEST PRACTICE FOR {} STYLE ********
 // Curly brace on the same or next line ....
 // Is it just a style?
 
@@ -126,7 +126,7 @@ console.log(a());
 console.log(b());
 /************************************************/
 
-/******************** FOR LOOP*******************/
+/******************** FOR LOOP*******************
 var sum=0;
 for(var i=0;i<10;i++){
 	sum += i;
@@ -135,7 +135,7 @@ console.log("sum of 0 through 9 is:" + sum);
 /************************************************/
 
 
-/********************* DEFAULT VALUES ****************/
+/********************* DEFAULT VALUES ****************
 function orderChicken(sideDish) {
 	 if( sideDish === undefined){
 		 sideDish ="whatever";
@@ -148,7 +148,7 @@ orderChicken();
 
 /************************************************/
 
-/************ OBJECT CREATION*******************/
+/************ OBJECT CREATION*******************
 var company = new Object(); 
 company.name = "Facebook";
 company.ceo = new Object();
@@ -176,7 +176,7 @@ console.log(facebook.ceo.firstName);
 /***********************************************/
 
 
-/********* FUNCTIONS ARE First-Class Data********/
+/********* FUNCTIONS ARE First-Class Data********
 // Functions ARE Objects
 
 function multiply(x,y) { 
@@ -210,7 +210,7 @@ result = doOprationOn(100, doubleAll);
 console.log(result)
 /***********************************************/
 
-/**** Varible Passing by Value or By Reference ***/
+/**** Varible Passing by Value or By Reference ***
 // PASS BY VALUE-: given b=a, [assing /opying by value means changing
 //                 copied value in b does not affect the value stored in a and vice-versa.
 //                  PRIMITIVE TYPES are are pass by value 
@@ -271,4 +271,81 @@ function changeObject(objValue) {
 value ={x:7};
 changeObject(value);
 console.log("after changeObject, orig value");
-console.log(value);
+console.log(value);*/
+
+
+/*********** FUNCTION CONSTRUCTOR, PROTOTYPE AND 'this' KEYWORD*****/
+// use of 'this'
+/*function test() {
+	console.log(this); // it gives window object
+	console.log("Hello Coursera");
+	this.name  = "PRi";
+}
+test();
+console.log(window.name);
+
+// Function Constructors - it cannot return anything
+function Circle (radius) {
+	console.log(this);
+}
+var myCircle = new Circle(10);
+console.log(myCircle); // it gives empty object
+	// 	OR
+function Circle (radius) {
+	this.radius = radius;
+
+	this.getArea = function(){
+		return Math.PI * Math.pow(this.radius, 2);
+	};
+}
+var myCircle = new Circle(10);
+console.log(myCircle);// it gives the value of radius
+console.log(myCircle.getArea());*/
+
+//FUNCTION PROTOTYPE 
+function Circle (radius) {
+	this.radius = radius;
+}
+Circle.prototype.getArea = function(){
+	return Math.PI * Math.pow(this.radius, 2);
+};
+var myCircle = new Circle(10);
+console.log(myCircle);// it gives the value of radius
+console.log(myCircle.getArea());
+
+//	OBJECT LITERALS and "this"
+var literalCircle = {
+	radius: 10,
+	getArea: function() {
+
+		console.log(this);
+
+		var increaseRadius = function() {
+			this.radius =20;
+		};
+		increaseRadius();
+		console.log(this.radius); // it still return radius value to 10 because when we vo implement one function in anothr fun 'this keyword start pointing to the global object.'
+		// to over come this we use 'self' keyword self is always going to be referring to this.
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+};
+console.log(literalCircle.getArea());
+
+// use of self
+// to over come this we use 'self' keyword self is always going to be referring to this.
+var literalCircle = {
+	radius: 10,
+	getArea: function() {
+		var self = this;
+		console.log(this);
+
+		var increaseRadius = function() {
+			self.radius =20;
+		};
+		increaseRadius();
+		console.log(this.radius); 
+		// to over come this we use 'self' keyword self is always going to be referring to this.
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+};
+console.log(literalCircle.getArea());

@@ -353,7 +353,7 @@ console.log(literalCircle.getArea());*/
 
 //    ARRAYS , CLOSURES AND NAMESPACE  
 
-/*var array = new Array();
+var array = new Array();
 array[0] = "Pri";
 array[1] = 2;
 array[2] = function(name) {
@@ -365,7 +365,7 @@ console.log(array[0]);
 array[2](); // it shows undefined becoz we have to pass argument to it
 array[2]("Pri");
 array[2](array[0]);
-console.log(array[3].course);*/
+console.log(array[3].course);
 
 //      SHORT HAND ARRAY CREATION    
 var names = ["Pri","singh" ,"rajput"];

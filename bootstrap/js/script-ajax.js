@@ -1,59 +1,3 @@
-// DOM manipulation - document object represents the entire HTML document,
-// console.log(document.getElementById("title"));
-// console.log(document instanceof HTMLDocument);
-
-// Event Handling
-document.addEventListener("DOMContentLoaded",
-	function(event) {
-		
-		function sayHello(event) {
-			console.log(event);
-		 this.textContent = "said it!" // change the value of button
-		 var name = document.getElementById("name").value;
-		 var message = "<h2>Hello " + name + "!</h2>";
-
-	// document
-	// 	.getElementById("content")
-	// 	.textContent = message;
-		document
-		 .getElementById("content")
-		 .innerHTML = message;
-
-		if(name ==='student'){
-		var title = 
-		 document
-			.querySelector("#title")
-			.textContent;
-		title += " & lovin it!";
-		 document
-			.querySelector("#title")
-			.textContent=title;
-		}
-	}
-// Event Hnadlers = Event handlers are basically functions that you bind using specific methods to certain events that happen in the browser.
-
-// Unobstructive event binding
-	document.querySelector("button")
-	.addEventListener("click",sayHello); 
-
-	document.querySelector("body")
-		.addEventListener("mousemove",
-		  function(event){
-		  	if(event.shiftKey === true){
-		  	console.log("x: "+ event.clientX);
-			console.log("y: "+event.clientY);	
-		  	}	
-		}
-		);  //event listener
-	
-}
-);
-
-
-
-// document.querySelector("button")
-// 	.onclick = sayHello;  // when we click on function the value of sayHelo function is assigned to onclick event and it shows in console
-
 //************** AJAX (Asynchronous Javascript And XML) *******************//
 // It is a client-server communication technique,
 //  let's talk about the language(IT is HTTP) in which the client, that is the browser, communicates with the server. And the language that they use, otherwise known as protocol, is HTTP.
@@ -79,3 +23,41 @@ document.addEventListener("DOMContentLoaded",
 // 4- HTML rendering
 // 5- HTTP Requestor- it is Asynchronous.
 // all 4 are connected to the JavaScript Engine
+
+document.addEventListener("DOMContentLoaded",
+	function(event) {
+
+	  // Unobstrusive event binding
+	  document.querySelector("button")
+	    .addEventListener("click", function () {
+	    
+	    	//  Call server to get the name
+	    	$ajaxUtils
+	    	 .sendGetRequest("name.json",
+	    	 	function (res) {
+	    	 		var message = 
+	    	 			res.firstName + " " + res.lastNmae
+	    	 		if (res.likeIndianFood) {
+	    	 			message += " likes Indian Food";
+	    	 		}
+	    	 		else {
+	    	 			message += " doesn't like Indian Food"
+	    	 		}
+	    	 		message += " and uses";
+	    	 		message += res.numberOfDisplays + 1;
+	    	 		message += " display for coding.";
+
+
+	 				 document.querySelector("#content")
+	    	         .innerHTML = "<h2>Hello " + message + "!</h2>"; 
+	    	 	});
+  
+	    } );
+	});
+
+/***************** JSON (JavaScript Object Notation)  ***************/
+ // Light weight data-interchange format 
+ //  > simple textual representation of data
+ // Easy for humans to read and write
+ // Easy for machines to parse and generate
+ // Completely independent of any language

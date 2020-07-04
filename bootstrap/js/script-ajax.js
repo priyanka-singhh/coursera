@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded",
 	    	 		else {
 	    	 			message += " doesn't like Indian Food"
 	    	 		}
-	    	 		message += " and uses";
+	    	 		message += " and uses ";
 	    	 		message += res.numberOfDisplays + 1;
 	    	 		message += " display for coding.";
 

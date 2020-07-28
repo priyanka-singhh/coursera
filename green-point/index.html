@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aunt Daisy's</title>
+    <title>Green Point -Vegas</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
 <body>
   <header>
@@ -18,14 +18,14 @@
       <div class="container">
         <div class="navbar-header">
           <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img" alt="Logo image" ></div>
+            <div id="logo-img"></div>
           </a>
           <!-- Navbar require a wrapping .navbar with .navbar-expand for responsive collapsing na dcolor scheme classes-->
           <!-- .navbar-brand for company,product,or project name-->
           <div class="navbar-brand">
             <a href="index.html"><h1>GREEN POINT</h1></a>
             <p>
-              <img src="images/star-k-logo.png" alt="Kosher Certification" height="30px" width="30px">
+              <img src="images/star-k-logo.png" alt="Kosher Certification">
               <span>kosher Certified</span>
             </p>
           </div>
@@ -47,14 +47,13 @@
         navbar-right is used specially used for navigaton bar.but i want it to be oulled to right-->
       <div id="collapsable-nav" class="collapse navbar-collapse">
         <ul id="nav-list" class="nav navbar-nav navbar-right">
-          <li class="visible-xs active">
+          <li id = "navHomeButton" class="visible-xs active">
             <a href="index.html">
-              <span class="glyphicon glyphicon-home" ></span>
-              <span class = "glyphicon-class">Home</span>
+              <span class="glyphicon glyphicon-home" ></span>Home
             </a>
           </li>
-          <li>
-            <a href="menu-category.html">
+          <li id="navMenuButton">
+            <a href="#" onclick="$dc.loadMenuCategories();">
               <!-- this glyphicon classes is used to bring icon font anf it is basically a vector based image that would behave same as the font would behave you can color it, size it and etc--> 
               <span class="glyphicon glyphicon-cutlery"></span>
               <br class="hidden-xs">Menu
@@ -80,8 +79,8 @@
         </ul><!--#nav-list-->
       </div><!--.collapse .navbar-collapse-->
 
-    </div>
-    </nav>
+    </div><!--.container-->
+    </nav><!--#header-nav-->
   </header>
   <div id="call-btn" class="visible-xs">
     <a class="btn" href="tel:410-602-5008">
@@ -92,31 +91,8 @@
   <!-- This container is for the entire page other than the header navbar it conatins the important information-->
   <!-- The jubotron is used for the special content shown in our page it is a grey block in which we put that content which is important-->
   <div id="main-content" class="container">
-    <div class="jumbotron">
-      <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
-    </div>
-
-    <!--The  three tiles below the jumbotron-->
-    <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="menu-category.html"><div id="menu-tile" ><span>menu</span>
-        </div></a>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="specials-tile" ><span>specials</span></div></a>
-      </div>
-
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <a href="https://goo.gl/maps/fcPYxVZ9EremVRqw9" target="_blank">
-          <div id="map-tile">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2303340714607!2d77.4414554494854!3d28.652821189829382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1dc41767a7d%3A0x90d5e163ab1e5434!2sMadan%20Sweets%20%26%20Food%20Point!5e0!3m2!1sen!2sin!4v1593168877608!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <span>map</span>
-          </div>
-        </a>
-      </div>
-    </div><!-- End of Home tile-->
-  </div><!-- End of #main content-->
+<!--     <div class="text-center"><img src="images/ajax-loader.gif"> -->
+  </div>
 
   <footer class="panel-footer">
     <div class="container">
@@ -149,6 +125,8 @@
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
+  
 </body>
 </html>
